@@ -6,7 +6,7 @@ export interface SectionWorkType {
   title: string;
 }
 
-const SectionWork = ({ title }: SectionWorkType) => {
+const SectionWork: React.FC<SectionWorkType> = ({ title }: SectionWorkType) => {
   return (
     <div className="section-work">
       <h2 className="section-work__title">{title}</h2>

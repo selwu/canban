@@ -15,7 +15,7 @@ const data = [
   },
 ];
 
-const ColumnList = () => {
+const ColumnList: React.FC = () => {
   const ColumnItems = data.map((column, index) => {
     return (
       <li key={index}>

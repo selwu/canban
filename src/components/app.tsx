@@ -3,7 +3,7 @@ import './app.css';
 import Header from './header/header';
 import ColumnList from './column-list/column-list';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="app ">
       <Header />

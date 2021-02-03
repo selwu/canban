@@ -6,7 +6,7 @@ interface ButtonType {
   children: string;
 }
 
-const Button = ({ className, children }: ButtonType) => {
+const Button: React.FC<ButtonType> = ({ className, children }: ButtonType) => {
   return <button className={className}>{children}</button>;
 };
 
