@@ -1,11 +1,13 @@
 import React from 'react';
 import './app.css';
-import Button from './button/button';
+import Header from './header/header';
+import ColumnList from './column-list/column-list';
 
 const App = () => {
   return (
-    <div className="App">
-      <Button className={'buttonTest'}>Hello</Button>
+    <div className="app ">
+      <Header />
+      <ColumnList />
     </div>
   );
 };
