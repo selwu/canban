@@ -1,13 +1,10 @@
 import React from 'react';
-import './app.css';
-import Header from './header/header';
-import ColumnList from './column-list/column-list';
+import './app.scss';
 
 const App: React.FC = () => {
   return (
     <div className="app ">
-      <Header />
-      <ColumnList />
+      <h2>Gjood</h2>
     </div>
   );
 };
