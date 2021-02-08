@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import './registration.scss';
 import Input from '../input/input';
 import Button from '../button/button';
+import { registration } from '../../actions/user';
 
 const Registration = () => {
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    registration(email, password);
   };
 
   const passwordHandler = (e: ChangeEvent<HTMLInputElement>) => {

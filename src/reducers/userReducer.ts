@@ -1,3 +1,5 @@
+const SET_USER = 'SET_USER';
+
 const defaultState = {
   currentUser: {},
   isAuth: false,
@@ -5,8 +7,15 @@ const defaultState = {
 
 export default (state = defaultState, action: any) => {
   switch (action.type) {
-    case true:
+    case SET_USER:
+      return {
+        ...state,
+        currentUser: action.payload.user,
+        isAuth: true,
+      };
     default:
       return state;
   }
 };
+
+export const setUser = (user: any) => ({ type: SET_USER, payload: user });
