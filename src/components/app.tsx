@@ -1,11 +1,11 @@
 import React from 'react';
 import './app.scss';
-import Authorization from './authorization/authorization';
+import Routes from '../ routes';
 
 const App: React.FC = () => {
   return (
     <div className="app ">
-      <Authorization />
+      <Routes />
     </div>
   );
 };

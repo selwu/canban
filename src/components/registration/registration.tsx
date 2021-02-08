@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import './registration.scss';
 import Input from '../input/input';
 import Button from '../button/button';
+import { registration } from '../../actions/user';
 
 const Registration = () => {
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    registration(email, password);
   };
 
   const passwordHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +29,7 @@ const Registration = () => {
         <Input value={email} onChange={emailHandler} type="email" title="Электронная почта:" />
         <Input value={password} onChange={passwordHandler} type="password" title="Пароль:" />
         <Button>Зарегистрироваться</Button>
-        <Link className="registration__link" to="/">
+        <Link className="registration__link" to="/login">
           Уже есть аккаунт
         </Link>
       </form>
