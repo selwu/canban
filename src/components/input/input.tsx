@@ -21,7 +21,7 @@ const Input = ({ type, title, placeholder, onChange, value, pattern }: InputType
         onChange={onChange}
         placeholder={placeholder}
         className="form__input"
-        id="contact"
+        name="contact"
         type={type}
         pattern={pattern}
       />

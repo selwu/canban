@@ -3,41 +3,26 @@
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  height: 40px;
-  color: #82B284;
+  color: #5a5a5a;
   border: none;
   box-sizing: border-box;
   border-radius: 2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 160%;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
   background-color: #E5E5E5;
   outline: none;
   &:hover {
-    color: #98C88C;
+    background-color: #e0e0e0;
   }
   &:active {
-    color: #58A742;
+    color: #4a4a4a;
   }
   &__icon {
     position: absolute;
     top: 11px;
     left: 12px;
-  }
-  &__icon path {
-    fill: #82B284;
-  }
-  &:hover &__icon path {
-    fill: #98C88C;
-  }
-  &:active &__icon path {
-    fill: #58A742;
-  }
-  &__input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
   }
 }

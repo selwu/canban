@@ -1,11 +1,11 @@
 import React from 'react';
 import './app.scss';
-import Registration from './registration/registration';
+import Authorization from './authorization/authorization';
 
 const App: React.FC = () => {
   return (
     <div className="app ">
-      <Registration />
+      <Authorization />
     </div>
   );
 };
