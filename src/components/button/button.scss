@@ -1,9 +1,11 @@
+@import 'src/utils/vars';
+
 .button {
   padding: 10px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  color: #5a5a5a;
+  color: #000;
   border: none;
   box-sizing: border-box;
   border-radius: 2px;
@@ -12,13 +14,14 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 130%;
-  background-color: #E5E5E5;
+  background-color: $normalGreen;
   outline: none;
   &:hover {
-    background-color: #e0e0e0;
+    background-color: $lightGreen;
+    color: #2b2727;
   }
   &:active {
-    color: #4a4a4a;
+    background-color: $strongGreen;
   }
   &__icon {
     position: absolute;
