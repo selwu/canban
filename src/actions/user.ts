@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { emit } from 'cluster';
 import { setUser } from '../reducers/userReducer';
 
 export const registration = async (email: string, password: string) => {
@@ -21,11 +20,25 @@ export const login = (email: string, password: string) => {
         email,
         password,
       });
-      // dispatch(setUser(res.data.user));
+      dispatch(setUser(res.data.user));
       localStorage.setItem('token', res.data.token);
-      console.log(res.data);
     } catch (e) {
-      console.log(e.response);
+      console.error(e.response);
+    }
+  };
+};
+
+export const auth = () => {
+  return async (dispatch: any) => {
+    try {
+      const res = await axios.get(`http://localhost:5000/users/auth`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      });
+      dispatch(setUser(res.data.user));
+      localStorage.setItem('token', res.data.token);
+    } catch (e) {
+      localStorage.removeItem('token');
+      console.error(e.response);
     }
   };
 };
