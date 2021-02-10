@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { userLogout } from '../../reducers/userReducer';
-
-export interface RootState {
-  user: any;
-}
+import { RootState } from '../../utils/types';
 
 const Navbar = () => {
   const isAuth = useSelector((state: RootState) => state.user.isAuth);
