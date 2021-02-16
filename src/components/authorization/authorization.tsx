@@ -2,19 +2,18 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import './authorization.scss';
 import Input from '../input/input';
 import Button from '../button/button';
-import { useDispatch } from 'react-redux';
 import { login } from '../../actions/user';
 import { useHistory } from 'react-router-dom';
 
 const Authorization = () => {
   const [password, setPassword] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const history = useHistory();
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(login(email, password));
+    // dispatch(login(email, password));
     history.push('/');
   };
 
