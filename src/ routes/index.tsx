@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Registration from '../components/registration/registration';
 import Authorization from '../components/authorization/authorization';
@@ -9,10 +9,10 @@ import Disk from '../components/disk/disk';
 import { Redirect } from 'react-router-dom';
 
 const Routes = () => {
-  // const isAuth = useSelector((state: RootState) => state.user.isAuth);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <>
-      {/* {!isAuth ? ( */}
+      {!loggedIn ? (
         <Switch>
           <Route exact path="/">
             <Navbar />
@@ -25,7 +25,7 @@ const Routes = () => {
           </Route>
           <Redirect to="/" />
         </Switch>
-      {/* ) : (
+       ) : (
         <Switch>
           <Route exact path="/">
             <Navbar />
@@ -33,7 +33,7 @@ const Routes = () => {
           </Route>
           <Redirect to="/" />
         </Switch>
-      )} */}
+      )}
     </>
   );
 };

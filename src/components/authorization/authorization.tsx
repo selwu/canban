@@ -1,19 +1,19 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useContext, useState } from 'react';
 import './authorization.scss';
 import Input from '../input/input';
 import Button from '../button/button';
-import { login } from '../../actions/user';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from "../../contexts/user-context";
+import { observer } from "mobx-react-lite";
 
-const Authorization = () => {
+const Authorization = observer(() => {
   const [password, setPassword] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  // const dispatch = useDispatch();
+  const userStore = useContext(UserContext);
   const history = useHistory();
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // dispatch(login(email, password));
     history.push('/');
   };
 
@@ -35,6 +35,6 @@ const Authorization = () => {
       </form>
     </div>
   );
-};
+});
 
 export default Authorization;

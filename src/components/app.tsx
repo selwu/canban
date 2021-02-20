@@ -7,7 +7,7 @@ import { auth } from '../actions/user';
 const App: React.FC = () => {
   // const dispatch = useDispatch();
   useEffect(() => {
-    // dispatch(auth());
+    // dispatch(auth());jjjjjjjjjjjjjjjjjjjjjjjjjjjjjj  ji        F GT                                                                                                                                                                                                                                                       
   }, []);
   return (
     <div className="app ">
