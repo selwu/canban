@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import './app.scss';
 import Routes from '../ routes';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { auth } from '../actions/user';
 
 const App: React.FC = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(auth());
+    // dispatch(auth());jjjjjjjjjjjjjjjjjjjjjjjjjjjjjj  ji        F GT                                                                                                                                                                                                                                                       
   }, []);
   return (
     <div className="app ">

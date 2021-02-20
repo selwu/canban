@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import './disk.scss';
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../utils/types';
 import { getFiles } from '../../actions/file';
 
 const Disk = () => {
-  const dispatch = useDispatch();
-  const currentDir = useSelector((state: RootState) => state.files.currentDir);
+  // const dispatch = useDispatch();
+  // const currentDir = useSelector((state: RootState) => state.files.currentDir);
 
-  useEffect(() => {
-    dispatch(getFiles(currentDir));
-  }, [currentDir]);
+  // useEffect(() => {
+  //   dispatch(getFiles(currentDir));
+  // }, [currentDir]);
 
   return (
     <div className="disk">
